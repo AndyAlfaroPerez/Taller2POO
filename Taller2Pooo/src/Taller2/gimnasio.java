@@ -23,7 +23,11 @@ public class gimnasio {
         return pokemons;
     }
 
-    public String getEstado() {
+    public int getNumero() {
+		return numero;
+	}
+
+	public String getEstado() {
         return estado;
     }
 

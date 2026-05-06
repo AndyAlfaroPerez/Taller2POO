@@ -4,22 +4,22 @@ import java.util.ArrayList;
 
 public class pokedex {
 
-    private ArrayList<pokemon> lista;
+    private ArrayList<pokemon> listaPokemones;
 
     public pokedex() {
-        lista = new ArrayList<>();
+        listaPokemones = new ArrayList<>();
     }
 
     public void agregarPokemon(pokemon p) {
-        lista.add(p);
+        listaPokemones.add(p);
     }
 
     public ArrayList<pokemon> getLista() {
-        return lista;
+        return listaPokemones;
     }
 
     public pokemon buscarPorNombre(String nombre) {
-        for (pokemon p : lista) {
+        for (pokemon p : listaPokemones) {
             if (p.getNombre().equalsIgnoreCase(nombre)) {
                 return p;
             }
@@ -27,15 +27,15 @@ public class pokedex {
         return null;
     }
 
-    public ArrayList<pokemon> filtrarPorHabitat(String habitat) {
-        ArrayList<pokemon> resultado = new ArrayList<>();
+    public ArrayList<pokemon> getPorHabitat(String habitat) {
+        ArrayList<pokemon> lista = new ArrayList<>();
 
-        for (pokemon p : lista) {
+        for (pokemon p : listaPokemones) {
             if (p.getHabitat().equalsIgnoreCase(habitat)) {
-                resultado.add(p);
+                lista.add(p);
             }
         }
 
-        return resultado;
+        return lista;
     }
 }

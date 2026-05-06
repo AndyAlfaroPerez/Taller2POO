@@ -9,19 +9,23 @@ public class pokemon {
     private int ataqueEsp;
     private int defensaEsp;
     private int velocidad;
-    private String estado; 
+    private String estado;
+	private String habitat;
+	private double probabilidad; 
 
-    public pokemon(String nombre, String tipo, int vida, int ataque, int defensa, int ataqueEsp, int defensaEsp, int velocidad) {
-        this.nombre = nombre;
-        this.tipo = tipo;
-        this.vida = vida;
-        this.ataque = ataque;
-        this.defensa = defensa;
-        this.ataqueEsp = ataqueEsp;
-        this.defensaEsp = defensaEsp;
-        this.velocidad = velocidad;
-        this.estado = "Vivo";
-    }
+    public pokemon(String nombre, String habitat, double prob, int vida, int ataque, int defensa, int ataqueEsp, int defensaEsp, int velocidad, String tipo) {
+    	this.nombre = nombre;
+    	this.habitat = habitat;
+    	this.probabilidad = prob;
+    	this.vida = vida;
+    	this.ataque = ataque;
+    	this.defensa = defensa;
+    	this.ataqueEsp = ataqueEsp;
+    	this.defensaEsp = defensaEsp;
+    	this.velocidad = velocidad;
+    	this.tipo = tipo;
+}
+    
 
     public int getStatsTotales() {
         return vida + ataque + defensa + ataqueEsp + defensaEsp + velocidad;
@@ -55,6 +59,35 @@ public class pokemon {
     }
 
 	public String getHabitat() {
-		return null;
+		return habitat;
+	}
+
+	public double getProbabilidad() {
+		return probabilidad;
+	}
+
+	public int getVida() {
+		return vida;
+	}
+
+	public int getAtaque() {
+		return ataque;
+	}
+
+
+	public int getDefensa() {
+		return defensa;
+	}
+
+	public int getAtaqueEsp() {
+		return ataqueEsp;
+	}
+
+	public int getDefensaEsp() {
+		return defensaEsp;
+	}
+
+	public int getVelocidad() {
+		return velocidad;
 	}
 }
