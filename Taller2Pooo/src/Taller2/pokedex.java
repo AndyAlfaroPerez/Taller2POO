@@ -1,7 +1,7 @@
 package Taller2;
 
 import java.util.ArrayList;
-
+//Repositorio de todos los pokemon disponibles en el juego
 public class pokedex {
 
     private ArrayList<pokemon> listaPokemones;
@@ -17,7 +17,7 @@ public class pokedex {
     public ArrayList<pokemon> getLista() {
         return listaPokemones;
     }
-
+    // Busca un pokemon por nombre ignorando mayusculas
     public pokemon buscarPorNombre(String nombre) {
         for (pokemon p : listaPokemones) {
             if (p.getNombre().equalsIgnoreCase(nombre)) {
@@ -26,7 +26,7 @@ public class pokedex {
         }
         return null;
     }
-
+    // Retorna todos los pokemon que viven en el habitat indicado
     public ArrayList<pokemon> getPorHabitat(String habitat) {
         ArrayList<pokemon> lista = new ArrayList<>();
 

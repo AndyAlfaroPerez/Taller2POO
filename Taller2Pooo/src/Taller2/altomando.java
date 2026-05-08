@@ -1,7 +1,7 @@
 package Taller2;
 
 import java.util.ArrayList;
-
+//Representa a un miembro del alto Mando con su equipo de 6 Pokémon
 public class altomando {
     private int numero;
     private String nombre;

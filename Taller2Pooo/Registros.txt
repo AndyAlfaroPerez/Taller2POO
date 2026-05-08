@@ -1,2 +1,3 @@
-Andy;0
-Seismitoad;Vivo
+Andy;none
+Victreebel;Vivo
+Milotic;Vivo

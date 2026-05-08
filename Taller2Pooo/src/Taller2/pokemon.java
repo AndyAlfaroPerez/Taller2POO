@@ -1,5 +1,5 @@
 package Taller2;
-
+//representa un pokemon con stats y etc 
 public class pokemon {
     private String nombre;
     private String tipo;
@@ -12,7 +12,7 @@ public class pokemon {
     private String estado;
 	private String habitat;
 	private double probabilidad; 
-
+	// Retorna la suma de todas las estadísticas del Pokémon
     public pokemon(String nombre, String habitat, double prob, int vida, int ataque, int defensa, int ataqueEsp, int defensaEsp, int velocidad, String tipo) {
     	this.nombre = nombre;
     	this.habitat = habitat;
@@ -34,11 +34,11 @@ public class pokemon {
     public boolean estaVivo() {
         return estado.equalsIgnoreCase("Vivo");
     }
-
+ // Cambia el estado a Debilitado
     public void debilitar() {
         estado = "Debilitado";
     }
-
+ // Cambia el estado a Vivo
     public void curar() {
         estado = "Vivo";
     }
@@ -52,7 +52,7 @@ public class pokemon {
     public String getEstado() { 
     	return estado; 
     	}
-
+    // Muestra nombre, tipo y stats totales
     @Override
     public String toString() {
         return nombre + " | " + tipo + " | Stats: " + getStatsTotales() + " | " + estado;
